@@ -1,0 +1,18 @@
+{
+  "name": "@template/site",
+  "exports": "./src/index.html",
+  "compilerOptions": {
+    "module": "ESNext",
+    "strict": true,
+    "lib": ["deno.window", "dom"]
+  },
+  "tasks": {
+    "bundle": "deno bundle --outdir ../dist ./index.html --platform browser --watch --unstable-raw-imports",
+    "dev": "deno task bundle & deno run --allow-net --allow-read jsr:@std/http/file-server ../dist --watch-hmr=../dist",
+    "build": "deno bundle --outdir ../dist ./index.html --platform browser --minify --unstable-raw-imports"
+  },
+  "imports": {
+    "lucide": "npm:lucide@^0.562.0",
+    "markdown-it": "npm:markdown-it@14"
+  }
+}

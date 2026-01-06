@@ -1,0 +1,142 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.markdown-body {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1c1c1c;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+code, pre {
+  font-family: "Fira Code", monospace;
+  background-color: #f1f1f1;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: #ffffff;
+}
+
+/* Icon-only copy buttons */
+button.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  margin: 0 0.2rem;
+  vertical-align: middle;
+}
+
+/* Icon inside button scales automatically */
+button.copy-btn svg {
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+}
+
+/* Clipboard state (blue) */
+button.copy-btn.clipboard {
+  background-color: #2196f3; /* blue */
+}
+button.copy-btn.clipboard:hover {
+  background-color: #1e88e5;
+}
+button.copy-btn.clipboard:active {
+  background-color: #1976d2;
+  transform: scale(0.95);
+}
+
+/* Copied state (green) */
+button.copy-btn.copied {
+  background-color: #4caf50; /* green */
+}
+button.copy-btn.copied:hover {
+  background-color: #45a049;
+}
+button.copy-btn.copied:active {
+  background-color: #3e8e41;
+  transform: scale(0.95);
+}
+
+/* Links */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Horizontal rule */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 2rem 0;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+td, th {
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+}
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  .markdown-body {
+    padding: 1rem;
+  }
+  button {
+    width: 100%;
+  }
+}

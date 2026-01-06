@@ -1,0 +1,9 @@
+{
+  "workspace": ["./script-generator", "./site"],
+  "tasks": {
+    "build": "deno task --filter @template/script-generator build",
+    "site:build": "deno task build && deno task --filter @template/site build",
+    "site:dev": "deno task build && deno task --filter @template/site dev"
+  },
+  "exclude": ["dist", "node_modules", ".github"]
+}

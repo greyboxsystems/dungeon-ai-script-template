@@ -1,0 +1,13 @@
+{
+  "name": "@template/script-generator",
+  "exports": "./src/main.ts",
+  "compilerOptions": {
+    "module": "ESNext",
+    "strict": true
+  },
+  "tasks": {
+    "strip-esm": "deno run --allow-read=../dist/library.js --allow-write=../dist/library.js .deno/strip_exports.ts ../dist/library.js",
+    "bundle": "deno bundle src/main.ts -o=../dist/library.js --platform=browser --inline-imports=true",
+    "build": "deno task bundle && deno task strip-esm"
+  }
+}
