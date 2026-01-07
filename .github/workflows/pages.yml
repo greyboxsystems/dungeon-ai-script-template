@@ -32,7 +32,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: stable
+          deno-version: latest
       - name: Build static site
         run: deno task site:build
       - name: Upload artifact
